@@ -1,166 +1,53 @@
-<!DOCTYPE html> 
-<!-- Define o tipo de documento como HTML5 -->
-<html lang="pt-br">
-<!-- Define a linguagem do documento como português brasileiro -->
+<html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <!-- Define a codificação de caracteres como UTF-8, suportando caracteres acentuados -->
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Define a largura da viewport para se ajustar à tela do dispositivo, útil para responsividade em dispositivos móveis -->
-
-  <title>Recomendador de Jogos</title>
-  <!-- Define o título que aparece na aba do navegador como "Recomendador de Jogos" -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  <!-- Importa a biblioteca p5.js para possíveis manipulações gráficas (embora não usada diretamente neste código) -->
-
-  <style>
-    /* Estilo para a página */
-    
-    .box {
-      width: 850px;
-      /* Define a largura da div como 850px */
-      
-      margin: 20px auto;
-      /* Adiciona uma margem superior e inferior de 20px e centraliza horizontalmente com auto */
-      
-      padding: 20px;
-      /* Define um preenchimento interno de 20px em todos os lados, adicionando espaço entre o conteúdo interno e as bordas da div */
-      
-      border: 2px solid #4c0073;
-      /* Adiciona uma borda sólida de 2px com a cor #4c0073 (roxo escuro) */
-      
-      border-radius: 10px;
-      /* Arredonda os cantos da div em 10px */
-      
-      background-color: #f4f4f4;
-      /* Define a cor de fundo da div como #f4f4f4 (cinza claro) */
-      
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      /* Adiciona uma sombra na div com raio de desfoque de 15px, cor preta com 20% de opacidade */
-      
-      text-align: center;
-      /* Centraliza o texto dentro da div */
-    }
-
-    h2 {
-      color: #4c0073;
-      /* Define a cor do texto do cabeçalho h2 como #4c0073 (roxo escuro) */
-    }
-
-    span, input, label {
-      font-size: 18px;
-      /* Define o tamanho da fonte como 18px para spans, inputs e labels */
-
-      margin: 10px;
-      /* Adiciona uma margem de 10px ao redor desses elementos */
-
-      color: #333;
-      /* Define a cor do texto como #333 (cinza escuro) */
-    }
-
-    .input-container {
-      display: inline-block;
-      /* Exibe o contêiner de entrada como um bloco inline, permitindo alinhamento ao lado de outros elementos */
-    }
-
-    iframe {
-      margin-top: 20px;
-      /* Adiciona uma margem superior de 20px ao iframe */
-
-      border: 2px solid #4c0073;
-      /* Adiciona uma borda de 2px sólida ao iframe com a cor #4c0073 */
-
-      border-radius: 10px;
-      /* Arredonda os cantos do iframe em 10px */
-    }
-
-    .hidden {
-      display: none;
-      /* Define que os elementos com essa classe serão ocultos (não exibidos) */
-    }
-
-    button {
-      margin-left: 10px;
-      /* Adiciona uma margem à esquerda de 10px para o botão */
-    }
-  </style>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Guiminamflix</title>
 </head>
+
 <body>
-  <div class="box">
-    <!-- Cria uma div com a classe "box", aplicando as regras CSS especificadas acima -->
-    
-    <h2>Recomendador de Jogos</h2>
-    <!-- Cabeçalho da aplicação "Recomendador de Jogos" com estilo aplicado à tag h2 -->
+    <header>GUIMINAMFLIX</header>
 
-    <div class="input-container">
-      <!-- Cria um contêiner para os elementos de entrada de dados -->
-      
-      <span>Sua idade:</span>
-      <!-- Texto exibido antes do campo de entrada -->
-      
-      <input id="idadeInput" type="number" value="5" />
-      <!-- Campo de entrada do tipo "número", com o valor inicial definido como 5 -->
-      
-      <button id="resetButton">Reset</button>
-      <!-- Botão que permite redefinir a entrada de idade -->
-    </div>
+    <section class="chamada">
+        <div class="chamada-texto">
+            <h1>ATRAVÉS DO ARANHAVERSO</h1>
+            <p>#homem-aranha</p>
+        </div>
 
-    <!-- Iframe para exibir o jogo recomendado -->
-    <iframe id="gameIframe" width="485" height="402" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
-    <!-- Iframe com largura de 485px e altura de 402px para embutir o jogo recomendado -->
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gt_fAE1Eg2Q?si=EEv-tsY_b1B2OwKE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
 
-    <p id="statusMessage">Em construção</p>
-    <!-- Parágrafo que exibe mensagens de status, inicialmente exibindo "Em construção" -->
+    <section class="categoria">
+        <h2>Filmes e séries</h2>
+        <div class="categoria-videos">
+            <a href="https://www.youtube.com/watch?v=cs15QqG6Gjc">
+                <img src="https://img.youtube.com/vi/cs15QqG6Gjc/maxresdefault.jpg" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=nCmIwcycUJ8">
+                <img src="https://img.youtube.com/vi/nCmIwcycUJ8/maxresdefault.jpg" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=FvRmEapoHRc">
+                <img src="https://img.youtube.com/vi/FvRmEapoHRc/maxresdefault.jpg" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=Ipkw_hWW-Hw">
+                <img src="https://img.youtube.com/vi/Ipkw_hWW-Hw/maxresdefault.jpg" />
+            </a>
+            <a href="https://www.youtube.com/watch?v=d4DzMNGoyis">
+                <img src="https://img.youtube.com/vi/d4DzMNGoyis/maxresdefault.jpg" />
+            </a>
+        </div>
+    </section>
 
-    <script>
-      // Seleciona os elementos do DOM que serão manipulados
-      const gameIframe = document.getElementById('gameIframe');
-      const idadeInput = document.getElementById('idadeInput');
-      const statusMessage = document.getElementById('statusMessage');
-      const resetButton = document.getElementById('resetButton');
-
-      // Inicialmente, o iframe é escondido
-      gameIframe.classList.add('hidden');
-
-      // Função para gerar a recomendação de jogo com base na idade
-      function geraRecomendacao(idade) {
-        if (idade == 14) {
-          // Se a idade for 14, carrega um jogo no iframe e exibe "Bom jogo!"
-          gameIframe.src = "https://scratch.mit.edu/projects/1073615209/embed";
-          gameIframe.classList.remove('hidden');
-          statusMessage.textContent = "Bom jogo!";
-        } else if (idade == 16) {
-          // Se a idade for 16, carrega um jogo diferente no iframe e exibe "Bom jogo!"
-          gameIframe.src = "https://scratch.mit.edu/projects/712511942/embed";
-          gameIframe.classList.remove('hidden');
-          statusMessage.textContent = "Bom jogo!";
-        } else {
-          // Para qualquer outra idade, o iframe permanece oculto e exibe "Em construção"
-          gameIframe.classList.add('hidden');
-          statusMessage.textContent = "Em construção";
-        }
-      }
-
-      // Detecta quando o usuário pressiona a tecla Enter no campo de idade
-      idadeInput.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-          // Se Enter for pressionado, chama a função de recomendação de jogo
-          geraRecomendacao(idadeInput.value);
-          // Desabilita o campo de idade para evitar novas edições
-          idadeInput.disabled = true;
-        }
-      });
-
-      // Adiciona um ouvinte de evento ao botão de reset
-      resetButton.addEventListener('click', function() {
-        // Quando clicado, limpa o iframe, reseta a mensagem de status e permite nova inserção de idade
-        gameIframe.src = "";
-        statusMessage.textContent = "Em construção";
-        idadeInput.disabled = false;
-      });
-    </script>
-  </div>
 </body>
+
 </html>
